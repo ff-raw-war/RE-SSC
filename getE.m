@@ -33,6 +33,8 @@ function E = getE(X, P, C, S, L, J1, J3, gamma, mu)
     % Solve the Continuous Lyapunov Equation: A*E + E*B + C = 0.
     % Here, 'lyap' computes the unique matrix E that satisfies the optimality 
     % condition for the E-subproblem in this iteration.
-    E = lyap(A, B, C);
-    
+    if eig(A) + eig(B) == 0
+        E = lyap(A, B, C);
+    else
+        die('non-existent or non unique');
 end
