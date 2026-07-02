@@ -15,7 +15,7 @@ totalCycle = 2;                                 % Number of times to run each pa
 % Dataset configuration
 dataSetName = 'ORL_32x32';                      % Name of the .mat file to be loaded
 load(dataSetName);                              % Load the dataset (expected to contain 'fea' and 'gnd')
-method = 'Seventh 1.4.1';                       % Label identifying the current algorithm version
+method = 'RE-SSC';                       	    % Label identifying the current algorithm version
 
 X = double(fea);                                % Convert feature data to double precision for calculations
 label = gnd;                                    % Assign the ground truth labels to 'label'
